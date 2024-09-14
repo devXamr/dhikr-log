@@ -107,7 +107,7 @@ export default function CountingTasbih({isDarkOn, setDark}){
                 {tasbih === 0 && <div className='font-sans font-light text-center pt-12 dark:text-white'>Tap To Start</div>}
 
                 {tasbih > 0 && <div
-                    className='font-bold text-center bg-slate-200 text-black w-max mt-11 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5' onClick={changeSave}>Save</div>}
+                    className='font-bold text-center bg-slate-200 text-black w-max mt-11 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5 dark:text-white dark:bg-gray-600 dark:border-gray-700' onClick={changeSave}>Save</div>}
 
 
                 <div onClick={changeLog} className='font-bold text-center bg-slate-200 text-black w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl mb-8 border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5 dark:text-white dark:bg-gray-600 dark:border-gray-700'>{isLogClicked? 'Close' : 'Show Log'}</div>
@@ -127,11 +127,11 @@ export default function CountingTasbih({isDarkOn, setDark}){
                 }
             </div>
 
-            {isSaveClicked && <div className='z-50 bg-gray-200 absolute top-80 left-16 text-center pr-7 pl-7 pb-16 pt-16 rounded-xl mr-auto ml-auto'>
+            {isSaveClicked && <div className='dark:text-white dark:bg-gray-600 z-50 bg-gray-200 absolute top-80 left-16 text-center pr-7 pl-7 pb-16 pt-16 rounded-xl mr-auto ml-auto'>
                 <div className='text-xl font-bold mb-3'>Save As:</div>
-                <input type='text' value={name} onChange={updateName} placeholder='Enter name' className='py-2 rounded-xl px-3' />
+                <input type='text' value={name} onChange={updateName} placeholder='Enter name' className='py-2 rounded-xl px-3 dark:bg-gray-400 dark:text-white dark:font-semibold' />
                 <div onClick={handleLogSubmit}
-                    className='font-bold text-center bg-white text-black w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5'>Done
+                    className='font-bold text-center bg-white text-black w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5 dark:text-white dark:bg-black dark:border-gray-800'>Done
                 </div>
                 <div onClick={changeSave} className='font-bold text-center w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl hover:px-5 bg-white border-4 border-red-600 text-red-600 hover:text-white duration-200 hover:cursor-pointer hover:bg-red-600' >Cancel</div>
 
