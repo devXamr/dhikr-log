@@ -18,11 +18,16 @@ import TasbihMain from "./TasbihMain.jsx";
    // return tas
 
 export default function App() {
+    const [darkOn, setDarkOn] = useState(false)
+
+    function darkSetter(){
+        setDarkOn(prev => !prev)
+    }
     return <BrowserRouter>
             <Routes>
-                <Route path="/simple" element={<CountingTasbih />} />
-                <Route path='/tasbih' element={<TasbihMain/>} />
-                <Route path='/' element={<Landing/>} />
+                <Route path="/simple" element={<CountingTasbih isDarkOn={darkOn} setDark={darkSetter} />} />
+                <Route path='/tasbih' element={<TasbihMain isDarkOn={darkOn} setterFunc={darkSetter}/>} />
+                <Route path='/' element={<Landing setDark={darkSetter} isDarkOn={darkOn}/>} />
             </Routes>
         </BrowserRouter>
 
