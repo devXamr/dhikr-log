@@ -92,7 +92,7 @@ export default function CountingTasbih({isDarkOn, setDark}){
 
 
     return (
-        <div className={`${isDarkOn && 'dark'}`}>
+        <div className={`${isDarkOn && 'dark'} dark:bg-black pb-16`}>
             <DarkModeToggleButton boolVal={isDarkOn} setterFunc={setDark}/>
             <div className='w-screen h-screen z-10 dark:bg-black' onClick={updateTasbih}>
 
@@ -112,7 +112,7 @@ export default function CountingTasbih({isDarkOn, setDark}){
 
                 <div onClick={changeLog} className='font-bold text-center bg-slate-200 text-black w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl mb-8 border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5 dark:text-white dark:bg-gray-600 dark:border-gray-700'>{isLogClicked? 'Close' : 'Show Log'}</div>
                 { isLogClicked &&
-                    <div className='mr-1 ml-1'>
+                    <div className='mr-1 ml-1 dark:bg-black'>
                         <div className='flex justify-between font-bold'>
                             <RowComp text='Date'/>
                             <RowComp text='Label'/>
@@ -133,7 +133,7 @@ export default function CountingTasbih({isDarkOn, setDark}){
                 <div onClick={handleLogSubmit}
                     className='font-bold text-center bg-white text-black w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl border-4 border-white hover:border-green-800 hover:cursor-pointer duration-200 hover:px-5 dark:text-white dark:bg-black dark:border-gray-800'>Done
                 </div>
-                <div onClick={changeSave} className='font-bold text-center w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl hover:px-5 bg-white border-4 border-red-600 text-red-600 hover:text-white duration-200 hover:cursor-pointer hover:bg-red-600' >Cancel</div>
+                <div onClick={changeSave} className='font-bold text-center w-max mt-4 mr-auto ml-auto pr-3 pl-3 pt-1 pb-1 rounded-lg text-xl hover:px-5 bg-white border-4 border-red-600 text-red-600 hover:text-white duration-200 hover:cursor-pointer hover:bg-red-600'>Cancel</div>
 
 
 
