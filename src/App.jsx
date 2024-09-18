@@ -17,7 +17,7 @@ import TasbihMain from "./TasbihMain.jsx";
   //  if(!tas) return 0;
    // return tas
 
-function getDarkOn(){
+function fetchDarkOn(){
     let darkOn
     try{
         darkOn = JSON.parse(localStorage.getItem('darkOn'))
@@ -30,7 +30,7 @@ function getDarkOn(){
 }
 
 export default function App() {
-    const [darkOn, setDarkOn] = useState(getDarkOn)
+    const [darkOn, setDarkOn] = useState(fetchDarkOn)
 
     function darkSetter(){
         setDarkOn(prev => !prev)
