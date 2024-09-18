@@ -17,12 +17,28 @@ import TasbihMain from "./TasbihMain.jsx";
   //  if(!tas) return 0;
    // return tas
 
+function getDarkOn(){
+    let darkOn
+    try{
+        darkOn = JSON.parse(localStorage.getItem('darkOn'))
+    }catch (e){
+        console.log(e)
+    }
+
+    if(!darkOn) return false
+    return darkOn
+}
+
 export default function App() {
-    const [darkOn, setDarkOn] = useState(false)
+    const [darkOn, setDarkOn] = useState(getDarkOn)
 
     function darkSetter(){
         setDarkOn(prev => !prev)
     }
+
+    useEffect(() => {
+        localStorage.setItem('darkOn', JSON.stringify(darkOn))
+        }, [darkOn])
     return <BrowserRouter>
             <Routes>
                 <Route path="/simple" element={<CountingTasbih isDarkOn={darkOn} setDark={darkSetter} />} />
