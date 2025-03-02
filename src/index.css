@@ -5,3 +5,7 @@
 * {
     @apply transition-colors duration-200
 }
+
+body {
+    background-color: #FFF8E7;
+}
