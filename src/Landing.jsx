@@ -41,8 +41,8 @@ export default function Landing({isDarkOn, setDark}){
 
             </button>
 
-            <div className='text-center font-medium mt-14 text-lg'>The month of repentance ends in <span className='underline'>30</span> days</div>
-            <div className='text-center text-lg'>Make your time count</div>
+            <div className='text-center text-lg mt-10'>إِنَّ ٱللَّهَ يُحِبُّ ٱلتَّوَّٲبِينَ وَيُحِبُّ ٱلۡمُتَطَهِّرِينَ </div>
+            <div className='text-center text-lg max-w-56 mx-auto'>"Verily, Allah loves those who repent and those who purify themselves." [Al-Qur'an 2:222]</div>
 
 
 
