@@ -93,7 +93,7 @@ export default function CountingTasbih({isDarkOn, setDark}){
 
     return (
         <div className={`${isDarkOn && 'dark'} dark:bg-black pb-16`}>
-            <DarkModeToggleButton boolVal={isDarkOn} setterFunc={setDark}/>
+            {/*<DarkModeToggleButton boolVal={isDarkOn} setterFunc={setDark}/>*/}
             <div className='w-screen h-screen z-10 dark:bg-black' onClick={updateTasbih}>
 
 

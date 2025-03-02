@@ -19,13 +19,15 @@ export default function Landing({isDarkOn, setDark}){
     function simpleDirect(){
         navigate('/simple')
     }
+
+    // temporarily disabled.
     function tasbihDirect(){
         navigate('/tasbih')
     }
     return <div className={`${isDarkOn && 'dark'} font-cabinet`}>
 
 
-        <DarkModeToggleButton boolVal={isDarkOn} setterFunc={setDark}/>
+        {/*<DarkModeToggleButton boolVal={isDarkOn} setterFunc={setDark}/> */}
         <div className='h-screen w-screen dark:bg-black relative '>
 
 
